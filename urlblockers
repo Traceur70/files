@@ -8,6 +8,7 @@ youtube.com##ytd-video-renderer:has(a[href^="/shorts"])
 youtube.com##a[href^="/shorts"]
 youtube.com##a[title*="Shorts"]
 youtube.com##[aria-label*="Shorts"]
+youtube.com##[id="shorts-player"]
 youtube.com##ytm-pivot-bar-item-renderer:has(yt-formatted-string:contains(Shorts))
 youtube.com##[is-shorts]
 youtube.com|**/shorts$xhr
