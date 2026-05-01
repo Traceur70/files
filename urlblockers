@@ -1,2 +1,5 @@
 ||9gag.com^
 ||img-9gag-fun.9cache.com^
+||youtube.com##a[href*="/shorts/"]
+||youtube.com##ytd-reel-shelf-renderer
+||youtube.com##ytd-rich-section-renderer:has-text(Shorts)
