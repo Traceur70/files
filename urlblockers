@@ -1,5 +1,22 @@
 ||9gag.com^
 ||img-9gag-fun.9cache.com^
-||youtube.com##a[href*="/shorts/"]
-||youtube.com##ytd-reel-shelf-renderer
-||youtube.com##ytd-rich-section-renderer:has-text(Shorts)
+! Remove Shorts entry points (menu, homepage, etc.)
+youtube.com##ytd-guide-entry-renderer a[href^="/shorts"]
+youtube.com##a[href^="/shorts"]
+
+! Remove Shorts shelves on homepage
+youtube.com##ytd-rich-section-renderer:has(ytd-reel-shelf-renderer)
+youtube.com##ytd-reel-shelf-renderer
+
+! Remove Shorts in subscriptions / search
+youtube.com##ytd-item-section-renderer:has(ytd-reel-shelf-renderer)
+
+! Remove Shorts overlay in video page
+youtube.com##ytd-watch-next-secondary-results-renderer ytd-reel-shelf-renderer
+
+! Remove Shorts buttons in mobile layout
+youtube.com##ytm-pivot-bar-item-renderer:has-text(Shorts)
+
+! Generic fallback (important)
+youtube.com##[is-shorts]
+youtube.com##ytd-thumbnail-overlay-time-status-renderer[overlay-style="SHORTS"]
